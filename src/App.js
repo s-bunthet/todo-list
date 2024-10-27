@@ -57,14 +57,13 @@ const [validated, setValidated] = useState(false);
                                       defaultValue=""
                                       value={input}
                                       onChange={(e) => setInput(e.target.value)}
-                                      className="mb-3 "
                                       isInvalid={validated && input.trim() ===""}
                                   />
                                   <Form.Control.Feedback type="invalid">Task can not be empty!</Form.Control.Feedback>
                               </Form.Group>
                           </Col>
                           <Col md="1" className={`px-0 mx-0`} >
-                              <Button  className="mb-1 btn-success" type="button" onClick={()=>addTask(input,id)}>Add</Button>
+                              <Button  className="btn-success" type="button" onClick={()=>addTask(input,id)}>Add</Button>
                           </Col>
                       </Row>
 
@@ -73,7 +72,7 @@ const [validated, setValidated] = useState(false);
               </Col>
 
           </Row>
-          <Row className={`justify-content-center`}>
+          <Row className={`justify-content-center mt-5`}>
               <Col xs={12} md={6} className={`px-0 mx-0`}>
                   <ListGroup as="ol" numbered>
                   {
